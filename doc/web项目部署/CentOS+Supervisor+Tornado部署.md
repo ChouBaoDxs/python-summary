@@ -20,16 +20,15 @@ echo_supervisord_conf > supervisord.conf
 ```
 # [include]
 # files = relative/directory/*.ini
-# 为（2-1创建的目录)
 [include]
-files = /etc/supervisor/*.conf
+files = /etc/supervisor/*.conf  # files改为2-1中创建的目录
 ```
 2-3. 将修改好的supervisord.conf复制到/etc/目录
 ```
 cp supervisord.conf /etc/
 ```
 ##### 3.配置被supervisord管理的tornado
-3-1. 在2-1创建的目录/etc/supervisor下用vim编辑一个被supervisord管理的tornado配置文件
+3-1. 在2-1创建的目录/etc/supervisor下用vim编辑一个被supervisord管理的tornado配置文件
 ```
 vim tornado_baidu_music.conf
 ```
@@ -93,9 +92,17 @@ supervisorctl   # 执行之后会列出正在运行的程序
 > update    ＃ 重启配置文件修改过的程序
 > exit  # 退出交互
 ```
+也可以不进入supervisorctl交互
+```
+supervisorctl status
+supervisorctl stop program_name
+supervisorctl start program_name
+supervisorctl restart program_name
+supervisorctl update
+```
 
 ##### 5.nginx配置(Centos7下通过yum安装nginx见6)
-5-1. 编辑nginx配置文件
+5-1. 编辑nginx配置文件
 ```
 vim /etc/nginx/nginx.conf
 ```

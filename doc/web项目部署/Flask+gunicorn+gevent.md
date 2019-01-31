@@ -19,4 +19,5 @@ bind = '0.0.0.0:5000'
 worker_class = 'gevent'
 ```
 然后就可以在Nginx中配置反向代理到这个gunicorn了，注意是用普通的proxy_pass。
+
 注：gunicorn部署django时，一般就是执行`gunicorn myproject.wsgi:application` # applcation可以省略
