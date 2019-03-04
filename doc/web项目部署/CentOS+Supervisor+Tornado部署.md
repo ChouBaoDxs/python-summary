@@ -174,3 +174,8 @@ sudo firewall-cmd --permanent --zone=public --add-service=http
 sudo firewall-cmd --permanent --zone=public --add-service=https
 sudo firewall-cmd --reload
 ```
+
+##### 7.Supervisor可视化管理工具Cesi
+- `CeSi` 是 Supervisor 官方推荐的集中化管理 Supervisor 实例的 Web UI，该工具是用 Python 编写，基于 Flask Web 框架 。
+- Superviosr 自带的 Web UI 不支持跨机器管理 
+- Supervisor 进程，功能比较简单，通过 CeSi 可以集中管理各个服务器节点的进程，在 Web 界面就可以轻松管理各个服务的启动、关闭、重启等，很方便使用。
