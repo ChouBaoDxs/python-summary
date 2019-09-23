@@ -10,7 +10,7 @@ Nginx：yum install nginx
 2.检查项目能否正常运行：
 	cd到项目目录：执行python manage.py runserver 0.0.0.0:80，确认外网可以正常访问项目
 			  后Ctrl+C终止
-	还是在项目目录：执行uwsgi --http :80 —moudle 项目名.wsgi（效果和runserver类似），确
+	还是在项目目录：执行uwsgi --http :80 —-moudle 项目名.wsgi（效果和runserver类似），确
 			  认外网也能正常访问后Ctrl+C
 
 3.修改项目里的settings.py：
