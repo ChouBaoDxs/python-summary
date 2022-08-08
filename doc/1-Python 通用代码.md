@@ -101,6 +101,11 @@ for row in work_sheet.get_rows():
     for cell in row:
         print(cell.value, end='\t')
     print()
+
+# 方式三
+for row in range(work_sheet.nrows):
+    row_values = work_sheet.row_values(row)
+    print(row_values)
 ```
 
 **openpyxl 写入 xlsx 例子**
